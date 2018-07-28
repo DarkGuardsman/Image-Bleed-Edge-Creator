@@ -18,7 +18,7 @@ public class GridMaker
     {
 
         final int grid_size = 16;
-        final int spacing = 1;
+        final int spacing = 2;
 
         //Get size of image
         final int width = 256;
@@ -44,6 +44,21 @@ public class GridMaker
             {
                 int x = w * size_per_slot;
                 int y = h * size_per_slot;
+
+                //Generate random pixels for testing
+                for (int i = 0; i < grid_size; i++) //x
+                {
+                    for (int j = 0; j < grid_size; j++) //y
+                    {
+                        //random color
+                        Color color = new Color(
+                                (int)Math.floor(Math.random() * 255),
+                                (int)Math.floor(Math.random() * 255),
+                                (int)Math.floor(Math.random() * 255));
+
+                        edit_image.setRGB(x + spacing + i, y + spacing + j, color.getRGB());
+                    }
+                }
 
                 //TOP-LEFT corner
                 edit_image.setRGB(x, y, Color.CYAN.getRGB()); //TODO handle spacing for corner
