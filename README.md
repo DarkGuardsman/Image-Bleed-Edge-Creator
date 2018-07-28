@@ -9,7 +9,7 @@ Run the jar with 2 arguments
 * Argument 1: Input file path
 * Argument 2: Size of sprites/tile slots
 
-Example1: java ibec.jar image.png 16
+Example1: java -jar Image-Bleed-Edge-Creator-1.0.jar image.png 16
 
 ## Option 2
 Run the jar with 4 arguments
@@ -18,7 +18,7 @@ Run the jar with 4 arguments
 * Argument 3: Size of sprites/tile slots
 * Argument 4: Spacing to use around each tile
 
-Example2: java ibec.jar /input/image.png /output/image.png 16 2  
+Example2: java -jar Image-Bleed-Edge-Creator-1.0.jar /input/image.png /output/image.png 16 2  
 
 #FAQ
 ## Why use?

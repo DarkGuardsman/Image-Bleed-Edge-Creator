@@ -20,6 +20,8 @@ public class Main
             //  1: grid_size
             if (args.length == 2)
             {
+                System.out.println("Running two argument command");
+
                 final String input_path = args[0];
                 final int grid_size = Integer.parseInt(args[1]);
 
@@ -38,6 +40,8 @@ public class Main
             //  3: spacing size for output
             else if (args.length == 4)
             {
+                System.out.println("Running four argument command");
+
                 final String input_path = args[0];
                 final String output_path = args[1];
 
@@ -60,6 +64,8 @@ public class Main
             }
             else if (args[0].equalsIgnoreCase("random-test"))
             {
+                System.out.println("Running random test command");
+
                 testLogic();
                 return;
             }
