@@ -50,37 +50,42 @@ public class ImageHandler
     public static void handleCorners(BufferedImage image, BufferedImage edit_image, int grid_size, int spacing, int w, int h, int x, int y)
     {
         //TOP-LEFT corner
+        int pixel = image.getRGB(w * grid_size, h * grid_size);
         for (int i = 0; i < spacing; i++) //x
         {
             for (int j = 0; j < spacing; j++) //y
             {
-                edit_image.setRGB(x + i, y + j, Color.CYAN.getRGB()); //TODO handle spacing for corner
+                edit_image.setRGB(x + i, y + j, pixel);
             }
         }
 
         //TOP-RIGHT corner
+        pixel = image.getRGB(w * grid_size + (grid_size - 1), h * grid_size);
         for (int i = 0; i < spacing; i++) //x
         {
             for (int j = 0; j < spacing; j++) //y
             {
-                edit_image.setRGB(x + grid_size + spacing + i, y + j, Color.CYAN.getRGB());
+                edit_image.setRGB(x + grid_size + spacing + i, y + j, pixel);
             }
         }
 
         //BOTTOM-LEFT corner
+        pixel = image.getRGB(w * grid_size, h * grid_size + (grid_size - 1));
         for (int i = 0; i < spacing; i++) //x
         {
             for (int j = 0; j < spacing; j++) //y
             {
-                edit_image.setRGB(x + i, y + grid_size + spacing + j, Color.CYAN.getRGB());
+                edit_image.setRGB(x + i, y + grid_size + spacing + j, pixel);
             }
         }
+
         //BOTTOM-RIGHT corner
+        pixel = image.getRGB(w * grid_size + (grid_size - 1), h * grid_size + (grid_size - 1));
         for (int i = 0; i < spacing; i++) //x
         {
             for (int j = 0; j < spacing; j++) //y
             {
-                edit_image.setRGB(x + grid_size + spacing + i, y + grid_size + spacing + j, Color.CYAN.getRGB());
+                edit_image.setRGB(x + grid_size + spacing + i, y + grid_size + spacing + j, pixel);
             }
         }
     }
